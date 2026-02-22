@@ -1,71 +1,156 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Prime Picks USA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: Arial; margin: 0; background: #f4f4f4; }
-    header { background: black; color: white; padding: 15px; text-align: center; }
-    .products { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
-    .card {
-      background: white;
-      width: 250px;
-      margin: 15px;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    img { width: 100%; border-radius: 10px; }
-    button {
-      background: black;
-      color: white;
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover { background: #444; }
-  </style>
+<title>Prime Picks USA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin:0;
+  background:#f2f5f9;
+}
+
+header{
+  background:linear-gradient(90deg,#b22234,#3c3b6e);
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+}
+
+header h1{
+  margin:0;
+  font-size:36px;
+}
+
+header p{
+  margin-top:10px;
+  font-size:18px;
+}
+
+.products{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding:40px 20px;
+}
+
+.card{
+  background:white;
+  width:280px;
+  margin:20px;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.badge{
+  background:#ff3b3b;
+  color:white;
+  padding:5px 10px;
+  font-size:12px;
+  position:absolute;
+  margin:10px;
+  border-radius:5px;
+}
+
+.card img{
+  width:100%;
+}
+
+.card-content{
+  padding:20px;
+  text-align:center;
+}
+
+.price{
+  font-size:20px;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+button{
+  background:#3c3b6e;
+  color:white;
+  border:none;
+  padding:12px;
+  width:100%;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:14px;
+  font-weight:bold;
+}
+
+button:hover{
+  background:#b22234;
+}
+
+footer{
+  background:black;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Prime Picks USA</h1>
-  <p>Trending Products | Fast Shipping | Best Deals</p>
+<h1>🇺🇸 Prime Picks USA</h1>
+<p>Top Trending Products | Fast Shipping | Limited Deals</p>
 </header>
 
 <div class="products">
 
-  <div class="card">
-    <img src="https://via.placeholder.com/250" alt="Product">
-    <h3>Wireless Mini Earbuds</h3>
-    <p>$29.99</p>
-    <button onclick="order('Wireless Mini Earbuds - $29.99')">Order on WhatsApp</button>
-  </div>
+<div class="card">
+<div class="badge">Best Seller</div>
+<img src="https://via.placeholder.com/300">
+<div class="card-content">
+<h3>Wireless Mini Earbuds</h3>
+<div class="price">$29.99</div>
+<button onclick="order('Wireless Mini Earbuds - $29.99')">Order Now</button>
+</div>
+</div>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/250" alt="Product">
-    <h3>Car Phone Holder 360°</h3>
-    <p>$14.99</p>
-    <button onclick="order('Car Phone Holder 360° - $14.99')">Order on WhatsApp</button>
-  </div>
+<div class="card">
+<div class="badge">Hot Deal</div>
+<img src="https://via.placeholder.com/300">
+<div class="card-content">
+<h3>Car Phone Holder 360°</h3>
+<div class="price">$14.99</div>
+<button onclick="order('Car Phone Holder 360° - $14.99')">Order Now</button>
+</div>
+</div>
 
-  <div class="card">
-    <img src="https://via.placeholder.com/250" alt="Product">
-    <h3>Portable Blender Bottle</h3>
-    <p>$24.99</p>
-    <button onclick="order('Portable Blender Bottle - $24.99')">Order on WhatsApp</button>
-  </div>
+<div class="card">
+<div class="badge">Trending</div>
+<img src="https://via.placeholder.com/300">
+<div class="card-content">
+<h3>Portable Blender Bottle</h3>
+<div class="price">$24.99</div>
+<button onclick="order('Portable Blender Bottle - $24.99')">Order Now</button>
+</div>
+</div>
 
 </div>
 
+<footer>
+© 2026 Prime Picks USA | All Rights Reserved
+</footer>
+
 <script>
-function order(product) {
-  var number = "916386256151";
-  var message = "Hello, I want to order: " + product;
-  var url = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
-  window.open(url, '_blank');
+function order(product){
+var number="916386256151";
+var message="Hello, I want to order: "+product;
+var url="https://wa.me/"+number+"?text="+encodeURIComponent(message);
+window.open(url,'_blank');
 }
 </script>
 
